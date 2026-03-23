@@ -1,107 +1,89 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trainingsplan</title>
-<style>
-body{font-family:Arial,Helvetica,sans-serif;background:#0f172a;color:#e5e7eb;margin:0;padding:30px}
-h1{font-size:32px;margin-bottom:10px}
-h2{margin-top:30px;color:#38bdf8}
-.container{max-width:900px;margin:auto}
-.card{background:#1e293b;border-radius:14px;padding:20px;margin-top:20px;box-shadow:0 10px 25px rgba(0,0,0,0.3)}
-.exercise{margin-left:15px;margin-top:6px}
-.weekbox{background:#020617;border:1px solid #334155;padding:15px;border-radius:10px;margin-top:20px}
-input{padding:8px;border-radius:6px;border:none;margin-top:6px}
-.status{font-size:18px;margin-top:10px}
-.deload{color:#f97316;font-weight:bold}
-.normal{color:#22c55e;font-weight:bold}
-</style>
-</head>
-<body>
+WOCHENPLAN
 
-<div class="container">
+Mo – Kraft A (Rücken & Grip)
+Di – Judo Randori (1.5h)
+Mi – Kettlebell Beine
+Do – Kraft C (Brust & Schulter)
+Fr – Judo Randori (1.5h)
+Sa – frei / Mobility
+So – Kettlebell Schulter + Core
 
-<h1>Surf & BJJ Trainingsplan</h1>
-<p>Starte dein Programm und sieh automatisch welche Woche du gerade trainierst und wann die Deload Woche kommt.</p>
 
-<div class="weekbox">
-<label>Programm Startdatum:</label><br>
-<input type="date" id="startDate" onchange="calculateWeek()">
+=================================
+KRAFT A – RÜCKEN & GRIFF
+=================================
 
-<div class="status" id="weekOutput"></div>
-<div class="status" id="deloadOutput"></div>
-</div>
+Warm-up:
+Scap Pull-ups 2×10
+Band Pull-Aparts 2×15
 
-<div class="card">
-<h2>Montag – Rücken & Grip</h2>
-<div class="exercise">Klimmzüge – 5×5–8</div>
-<div class="exercise">Horizontale Klimmzüge – 4×6–8</div>
-<div class="exercise">Dumbbell Rows – 3×10 / Seite</div>
-<div class="exercise">Einarmige Rows – 3×10 / Seite</div>
-<div class="exercise">Reverse Flys / Face Pulls – 3×15</div>
-<div class="exercise">Hanging Knee Raises / Toes to Bar – 3×max</div>
-</div>
+1. Klimmzüge – 5×5–8
+2. Horizontale Klimmzüge – 4×6–8
+3. Dumbbell Rows – 3×10/Seite
+4. Einarmige Rows – 3×10/Seite
+5. Reverse Flys / Face Pulls – 3×15
+6. Hanging Knee Raises / Toes-to-Bar – 3×max
 
-<div class="card">
-<h2>Mittwoch – Brust & Schulter</h2>
-<div class="exercise">Dips – 5×6–10</div>
-<div class="exercise">Einarmiges Schulterdrücken – 4×6–8</div>
-<div class="exercise">Langsame Liegestütze – 3×12–15</div>
-<div class="exercise">Seitheben – 3×15</div>
-<div class="exercise">Kurzhantel Windmills – 3×6–8 / Seite</div>
-<div class="exercise">Plank Shoulder Taps – 3×40 Sek</div>
-</div>
 
-<div class="card">
-<h2>Kettlebell Beine</h2>
-<div class="exercise">Goblet Squat – 12</div>
-<div class="exercise">Swings – 20</div>
-<div class="exercise">Reverse Lunges – 8 / Bein</div>
-<div class="exercise">KB Romanian Deadlift – 12</div>
-<div class="exercise">Squat Jumps / Box Jumps – 6</div>
-</div>
+=================================
+KRAFT C – BRUST & SCHULTER
+=================================
 
-<div class="card">
-<h2>Kettlebell Schulter & Conditioning</h2>
-<div class="exercise">KB Push Press – 6 / Arm</div>
-<div class="exercise">KB Halo – 10 pro Richtung</div>
-<div class="exercise">KB High Pull – 8 / Arm</div>
-<div class="exercise">KB Slingshot – 20 Wechsel</div>
-<div class="exercise">KB Windmill – 6 / Seite</div>
-<div class="exercise">KB Overhead Hold – 30 Sek / Arm</div>
-</div>
+Warm-up:
+Armkreisen + Band Rotations
 
-</div>
+1. Dips – 5×6–10
+2. Schulterdrücken Einarmig – 4×6–8
+3. Langsame Liegestütze – 3×12–15
+4. Seitheben – 3×15
+5. Kurzhantel Windmills – 3×6–8/Seite
+6. Plank Shoulder Taps – 3×40 Sek
 
-<script>
-function calculateWeek(){
 
-const start = new Date(document.getElementById("startDate").value);
-const now = new Date();
+=================================
+KETTLEBELL TAG – BEINE
+=================================
 
-if(!start.getTime()) return;
+Warm-up:
+Goblet Squats 2×10
+Hip Hinges 2×10
 
-const diff = now - start;
-const week = Math.floor(diff / (1000*60*60*24*7)) + 1;
+Zirkel – 4 Runden
 
-const weekOutput = document.getElementById("weekOutput");
-const deloadOutput = document.getElementById("deloadOutput");
+1. Kettlebell Goblet Squat – 12
+2. Kettlebell Swings – 20
+3. Reverse Lunges mit KB – 8/Bein
+4. Kettlebell Romanian Deadlift – 12
+5. Squat Jumps oder Box Jumps – 6
 
-weekOutput.innerHTML = "Aktuelle Trainingswoche: <b>" + week + "</b>";
+Pause zwischen Runden: 60–90 Sek
 
-if(week % 5 === 0){
 
- deloadOutput.innerHTML = "⚠️ Diese Woche ist eine <span class='deload'>Deload Woche</span> (weniger Volumen / Intensität).";
+=================================
+KETTLEBELL TAG – SCHULTER + CORE
+=================================
 
-}else{
+Warm-up:
+Armkreise
+Leichte Halos
 
- const next = 5 - (week % 5);
- deloadOutput.innerHTML = "Nächste Deload Woche in <span class='normal'>" + next + " Woche(n)</span>.";
+Zirkel – 4 Runden
 
-}
-}
-</script>
+1. Kettlebell Push Press – 6/Arm
+2. Kettlebell Halo – 10 pro Richtung
+3. Kettlebell Slingshot – 20 Wechsel
+4. Kettlebell Windmill – 6/Seite
+5. Suitcase Carry – 40 Sek/Seite
+6. Kettlebell Russian Twists – 20
 
-</body>
-</html>
+Pause zwischen Runden: 60–90 Sek
+
+
+=================================
+PROGRESSION
+=================================
+
++2 Wiederholungen pro Übung pro Woche
+oder eine zusätzliche Runde
+
+Alle 5–6 Wochen eine leichtere Woche.
